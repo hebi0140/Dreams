@@ -1,0 +1,30 @@
+{% extends 'dreams/base.html' %}
+{% block title %}About{% endblock %}
+{% block content %}
+<style type="text/css">
+ BODY {
+    background: #c6c0c0
+}
+
+</style>
+
+  <div class="container">
+
+
+      {% for i in musician %}
+      <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-1">{{i.title}}</h2>
+        <p class="lead">{{i.content}}</p>
+      </div>
+      <div class="col-md-5">
+<p><img class="img-article_left thumb" src={{i.photo.url}}></p>
+
+      </div>
+    </div>
+
+
+   {% endfor %}
+  </div>
+
+  {% endblock %}
